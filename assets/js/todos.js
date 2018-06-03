@@ -3,7 +3,7 @@ $("ul").on("click", "li", function(){
 	$(this).toggleClass("completed");
 });
 
-// click on X to delete TODO
+// click on X (trash can) to delete TODO
 $("ul").on("click", "span", function(event){
 	$(this).parent().fadeOut(500, function(){
 		$(this).remove();
@@ -17,7 +17,7 @@ $("input[type='text']").keypress(function(){
 		var todoText = $(this).val();
 		$(this).val("");
 		// create a new li and add to ul
-		$("ul").append("<li><span><i class='fa fa-trash'></i></span> " + todoText + "</li>");
+		$(this).parent().find("ul").append("<li><span><i class='fa fa-trash'></i></span> " + todoText + "</li>");
 	}
 });
 
