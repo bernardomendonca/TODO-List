@@ -76,19 +76,17 @@ input:focus{
 }
 
 .container {
-	display: table-cell;
 	width: 360px;
-	margin: 100px auto;
+	margin: 200px auto;
+	margin-right: 20px;
+	float: left;
 	background: #f7f7f7;
 	box-shadow: 0 0 3px rgba(0,0,0,0.1);
+	float: left;
 }
 
 #main-container{
-    display: table;
-    width: 100%; /*Optional*/
-    table-layout: fixed; /*Optional*/
-    border-spacing: 10px; /*Optional*/
-    padding: 200px 0 0 0;
+ 	margin-left: 90px;
 }
 
 .completed {
