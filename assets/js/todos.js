@@ -21,10 +21,19 @@ $("input[type='text']").keypress(function(){
 		$(this).val("");
 		// create a new li and add to ul
 		$(this).parent().find("ul").append("<li><span><i class='fa fa-trash'></i></span> " + todoText + "</li>");
-		// decrease 1 point from counter 
-		counterMorning = counterMorning - 1;
-		$("#counterMorning").text(counterMorning);	
-	}
+		// decreasing the couter of respective day-section
+		var test = $(this).parent().find("h1").text();
+		if (test.indexOf('Morning') >= 0) {
+			counterMorning = counterMorning - 1;
+			$(this).parent().find("span").text(counterMorning);
+		} else if (test.indexOf('Afternoon') >= 0) {
+			counterAfternoon = counterAfternoon - 1;
+			$(this).parent().find("span").text(counterAfternoon);	
+		} else {
+			counterNight = counterNight - 1;
+			$(this).parent().find("span").text(counterNight);				
+		};
+	};
 });
 
 $(".fa-plus").click(function(){
