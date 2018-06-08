@@ -25,13 +25,13 @@ $("input[type='text']").keypress(function(){
 		var test = $(this).parent().find("h1").text();
 		if (test.indexOf('Morning') >= 0) {
 			counterMorning = counterMorning - 1;
-			$(this).parent().find("span").text(counterMorning);
+			$("#counterMorning").text(counterMorning);
 		} else if (test.indexOf('Afternoon') >= 0) {
 			counterAfternoon = counterAfternoon - 1;
-			$(this).parent().find("span").text(counterAfternoon);	
+			$("#counterMorning").text(counterMorning);	
 		} else {
 			counterNight = counterNight - 1;
-			$(this).parent().find("span").text(counterNight);				
+			$("#counterMorning").text(counterMorning);				
 		};
 	};
 });
